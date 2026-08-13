@@ -6,7 +6,7 @@
 
 /* 
 fun main() {
-    val disciplina = "ProgramaÁ„o Mobile"
+    val disciplina = "Programa√ß√£o Mobile"
     val aulas = 20
     aulas = 21
     println("$disciplina tem $aulas aulas")
@@ -14,10 +14,10 @@ fun main() {
  
 
 // o erro ocorria por tentar mudar o valor de aulas que e declarado como val, mas valores declarados como val
-// n„o podem sofre alteraÁ„o e devem ser fixos
+// n√£o podem sofre altera√ß√£o e devem ser fixos
 
 fun main() {
-    val disciplina = "ProgramaÁ„o Mobile"
+    val disciplina = "Programa√ß√£o Mobile"
     var aulas = 20
     aulas = 21
     println("$disciplina tem $aulas aulas")
@@ -26,10 +26,10 @@ fun main() {
 */
 // exercicio 2
 
-//val nomeDoCurso = "An·lise e Desenvolvimento de Sistemas" //o nome do curso dificilmente vai mudar durante o ano
-//var totalDeAlunos = 0        // aumenta conforme a chamada | como j· est· escrito esse valor aumenta ou seja varia
-//val anoLetivo = 2026		// durante o ano letivo esse valor n„o sera auterado
-//var notaFinal = 0.0          // recalculada a cada avaliaÁ„o | mesma coisa, como j· esta escrito o valor varia
+//val nomeDoCurso = "An√°lise e Desenvolvimento de Sistemas" //o nome do curso dificilmente vai mudar durante o ano
+//var totalDeAlunos = 0        // aumenta conforme a chamada | como j√° est√° escrito esse valor aumenta ou seja varia
+//val anoLetivo = 2026		// durante o ano letivo esse valor n√£o sera auterado
+//var notaFinal = 0.0          // recalculada a cada avalia√ß√£o | mesma coisa, como j√° esta escrito o valor varia
 
 // exercicio 3
 
@@ -62,10 +62,10 @@ println(f::class) //errei
 
 //exercicio 4
 /*
- * n„o funcionava por que String? definia que o valor poderia ser null, e o valor estava declarado como null
+ * n√£o funcionava por que String? definia que o valor poderia ser null, e o valor estava declarado como null
  * mas apelido!! defiania que o valor nao podia ser null gerando um erro NullPointerException
  * 
- * isso e falado na documentaÁ„o do kotlin https://kotlinlang.org/docs/null-safety.html#not-null-assertion-operator
+ * isso e falado na documenta√ß√£o do kotlin https://kotlinlang.org/docs/null-safety.html#not-null-assertion-operator
  * 
 fun main() {
     val apelido: String? = null
@@ -104,13 +104,13 @@ data class Aluno(val nome: String, val endereco: Endereco?)
  
 fun main() {
     val ana = Aluno("Ana", null)
-    val beto = Aluno("Beto", Endereco("S„o Paulo"))
+    val beto = Aluno("Beto", Endereco("S√£o Paulo"))
     val caio = Aluno("Caio", Endereco(null))
     
     val alunos = listOf(ana, beto, caio)
     alunos.forEach {
         
-        if (it.endereco == null || it.endereco?.cidade == null){println(it.nome + " n„o tem registro de endereÁo ")}
+        if (it.endereco == null || it.endereco?.cidade == null){println(it.nome + " n√£o tem registro de endere√ßo ")}
         else{println(it.nome + " more em " + it.endereco?.cidade)}
         
         
@@ -135,7 +135,7 @@ fun main(){
 //exercicio 8
 /*
 fun matricular(nome: String, curso: String = "ADS", periodo: Int = 1) {
-    println("$nome ó $curso ó ${periodo}∫ perÌodo")
+    println("$nome ‚Äî $curso ‚Äî ${periodo}¬∫ per√≠odo")
 }
 
 
@@ -143,7 +143,7 @@ fun main(){
     
    matricular("Victorine")
    matricular("Donavon", periodo = 2)
-   matricular(periodo = 2, curso = "DominaÁ„o global", nome = "Norpintacio")
+   matricular(periodo = 2, curso = "Domina√ß√£o global", nome = "Norpintacio")
     
 }
 */
