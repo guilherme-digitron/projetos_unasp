@@ -3,19 +3,15 @@ workflows:
     name: Contador Android
     max_build_duration: 60
 
-    environment:
-      vars:
-        PACKAGE_NAME: "com.example.contador"
-
     scripts:
       - name: Configurar Android SDK
         script: |
-          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/contador-android/local.properties"
 
       - name: Compilar APK Debug
         script: |
-          chmod +x ./gradlew
-          ./gradlew assembleDebug
+          cd "$CM_BUILD_DIR/contador-android"
+          gradle assembleDebug
 
     artifacts:
-      - app/build/outputs/apk/debug/app-debug.apk
+      - contador-android/build/outputs/apk/debug/*.apk
