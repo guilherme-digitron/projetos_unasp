@@ -154,7 +154,6 @@ fun cardProduto(nome: String, funcao: String, modifier: Modifier = Modifier){
     }
 
 }
-
 @Composable
 fun bug(modifier: Modifier = Modifier) {
 
