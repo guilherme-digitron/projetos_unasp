@@ -58,21 +58,25 @@ class MainActivity : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun linhaChat(nome: String, funcao: String, modifier: Modifier = Modifier){
+fun linhaChat( modifier: Modifier = Modifier){
     Row(
         verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(40.dp)
+            .size(height = 100.dp, width = 160.dp)
+            .padding(16.dp)
             .border(2.dp, color = Color.Black, shape = RoundedCornerShape(16.dp))
     ) {
+        Spacer(Modifier.width(12.dp))
         Box(
             Modifier
-                .size(40.dp)
-                .clip(RectangleShape)
+                .size(50.dp)
+
+                .clip(RoundedCornerShape(12.dp))
                 .background(Color(0xFF103A5E))
-                .padding(5.dp)
-                .border(2.dp, color = Color(0xFF103A5E), shape = RoundedCornerShape(16.dp)),
+                .padding(horizontal = 10.dp)
+                .border(2.dp, color = Color(0xFF103A5E), shape = RoundedCornerShape(12.dp)),
             contentAlignment = Alignment.Center
         ){
             Text("A", color = Color.White)
@@ -80,10 +84,10 @@ fun linhaChat(nome: String, funcao: String, modifier: Modifier = Modifier){
         Spacer(Modifier.width(12.dp))
 
         Column(Modifier.weight(1f)) {
-            Text(nome, fontWeight = FontWeight.Bold)
-            Text(funcao, fontSize = 12.sp)
+            Text("pinto", fontWeight = FontWeight.Bold)
+            Text("funcao", fontSize = 12.sp)
         }
-        Text("14:32", color = Color(0xFF2E7D32))
+        Text("14:32", modifier.padding(horizontal = 10.dp), color = Color(0xFF2E7D32))
     }
 }
 @OptIn(ExperimentalMaterial3Api::class)
@@ -154,20 +158,21 @@ fun cardProduto(nome: String, funcao: String, modifier: Modifier = Modifier){
     }
 
 }
+
 @Composable
 fun bug(modifier: Modifier = Modifier) {
 
     // 1
-/*    Row(
+    Row(
         Modifier.fillMaxWidth(),
     ) {
         Text("Total", Modifier.weight(10f))
         Text("42,90", Modifier.weight(1f).background(color = Color.Gray))
         // o weight dividiu a largura da tela proporcionalmente entre os elementos
         // de aordo com seu proprio valor
-    }*/
+    }
 // 2
-    Row(
+   Row(
         Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
@@ -182,7 +187,7 @@ fun bug(modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun cartaoPreview(){
-    bug()
+    linhaChat()
 }
 
 
