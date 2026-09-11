@@ -161,7 +161,7 @@ fun bug(modifier: Modifier = Modifier) {
 /*    Row(
         Modifier.fillMaxWidth(),
     ) {
-        Text("Total", Modifier.weight(2f))
+        Text("Total", Modifier.weight(10f))
         Text("42,90", Modifier.weight(1f).background(color = Color.Gray))
         // o weight dividiu a largura da tela proporcionalmente entre os elementos
         // de aordo com seu proprio valor
